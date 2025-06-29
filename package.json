@@ -4,14 +4,21 @@
   "description": "WhatsApp Bot dengan fitur auto-reply, menu interaktif, kuis, dan payment handler",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node start-robust.js",
     "dev": "nodemon index.js",
     "test": "node test-setup.js",
     "validate": "node test-setup.js",
     "pm2:start": "pm2 start ecosystem.config.js",
     "pm2:stop": "pm2 stop whatsapp-me-bot",
     "pm2:restart": "pm2 restart whatsapp-me-bot",
-    "pm2:logs": "pm2 logs whatsapp-me-bot"
+    "pm2:logs": "pm2 logs whatsapp-me-bot",
+    "pterodactyl:start": "npm install --production && node index.js",
+    "pterodactyl:install": "npm install --production",
+    "start:direct": "node index.js",
+    "start:pterodactyl": "npm install --production && node start-robust.js",
+    "env-check": "node env-check.js",
+    "fix-permissions": "chmod -R 755 .",
+    "install-prod": "npm install --production --no-audit --no-fund"
   },
   "keywords": [
     "whatsapp",
@@ -27,6 +34,7 @@
     "qrcode-terminal": "^0.12.0",
     "fs-extra": "^11.2.0",
     "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
     "node-cron": "^3.0.3"
   },
   "devDependencies": {
