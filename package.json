@@ -1,0 +1,38 @@
+{
+  "name": "whatsapp-me-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot dengan fitur auto-reply, menu interaktif, kuis, dan payment handler",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node test-setup.js",
+    "validate": "node test-setup.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop whatsapp-me-bot",
+    "pm2:restart": "pm2 restart whatsapp-me-bot",
+    "pm2:logs": "pm2 logs whatsapp-me-bot"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "nodejs",
+    "auto-reply",
+    "interactive-menu"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "whatsapp-web.js": "^1.23.0",
+    "qrcode-terminal": "^0.12.0",
+    "fs-extra": "^11.2.0",
+    "moment": "^2.29.4",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

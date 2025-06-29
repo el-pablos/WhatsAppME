@@ -1,0 +1,103 @@
+{
+  "quizzes": [
+    {
+      "id": "general_knowledge",
+      "title": "🧠 Kuis Pengetahuan Umum",
+      "description": "Tes pengetahuan umum Anda dengan 5 pertanyaan menarik!",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Apa ibu kota Indonesia?",
+          "options": ["A. Jakarta", "B. Bandung", "C. Surabaya", "D. Medan"],
+          "correct": "A",
+          "explanation": "Jakarta adalah ibu kota Indonesia sejak kemerdekaan."
+        },
+        {
+          "id": 2,
+          "question": "Planet terdekat dengan Matahari adalah?",
+          "options": ["A. Venus", "B. Mars", "C. Merkurius", "D. Bumi"],
+          "correct": "C",
+          "explanation": "Merkurius adalah planet yang paling dekat dengan Matahari."
+        },
+        {
+          "id": 3,
+          "question": "Berapa jumlah provinsi di Indonesia saat ini?",
+          "options": ["A. 32", "B. 34", "C. 36", "D. 38"],
+          "correct": "D",
+          "explanation": "Indonesia memiliki 38 provinsi per tahun 2024."
+        },
+        {
+          "id": 4,
+          "question": "Siapa penemu lampu pijar?",
+          "options": ["A. Alexander Graham Bell", "B. Thomas Edison", "C. Nikola Tesla", "D. Albert Einstein"],
+          "correct": "B",
+          "explanation": "Thomas Edison adalah penemu lampu pijar yang praktis untuk digunakan."
+        },
+        {
+          "id": 5,
+          "question": "Apa mata uang Jepang?",
+          "options": ["A. Won", "B. Yuan", "C. Yen", "D. Ringgit"],
+          "correct": "C",
+          "explanation": "Yen adalah mata uang resmi Jepang."
+        }
+      ]
+    },
+    {
+      "id": "tech_quiz",
+      "title": "💻 Kuis Teknologi",
+      "description": "Seberapa update pengetahuan teknologi Anda?",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Apa kepanjangan dari HTML?",
+          "options": ["A. Hyper Text Markup Language", "B. High Tech Modern Language", "C. Home Tool Markup Language", "D. Hyper Transfer Markup Language"],
+          "correct": "A",
+          "explanation": "HTML adalah HyperText Markup Language, bahasa markup untuk membuat halaman web."
+        },
+        {
+          "id": 2,
+          "question": "Siapa pendiri Facebook?",
+          "options": ["A. Bill Gates", "B. Steve Jobs", "C. Mark Zuckerberg", "D. Elon Musk"],
+          "correct": "C",
+          "explanation": "Mark Zuckerberg mendirikan Facebook pada tahun 2004."
+        },
+        {
+          "id": 3,
+          "question": "Apa singkatan dari AI?",
+          "options": ["A. Automatic Intelligence", "B. Artificial Intelligence", "C. Advanced Intelligence", "D. Augmented Intelligence"],
+          "correct": "B",
+          "explanation": "AI adalah Artificial Intelligence atau Kecerdasan Buatan."
+        }
+      ]
+    }
+  ],
+  "polls": [
+    {
+      "id": "favorite_social_media",
+      "title": "📱 Media Sosial Favorit",
+      "question": "Apa platform media sosial favorit Anda?",
+      "options": [
+        "📘 Facebook",
+        "📸 Instagram", 
+        "🐦 Twitter/X",
+        "🎵 TikTok",
+        "💼 LinkedIn",
+        "📺 YouTube"
+      ],
+      "results": {}
+    },
+    {
+      "id": "preferred_payment",
+      "title": "💳 Metode Pembayaran Favorit",
+      "question": "Metode pembayaran apa yang paling sering Anda gunakan?",
+      "options": [
+        "🏦 Transfer Bank",
+        "📱 E-Wallet (DANA, OVO, dll)",
+        "💳 Kartu Kredit/Debit",
+        "📱 QRIS",
+        "💵 Cash/Tunai"
+      ],
+      "results": {}
+    }
+  ]
+}
