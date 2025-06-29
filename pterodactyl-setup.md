@@ -6,7 +6,7 @@ Panduan lengkap untuk deploy WhatsApp Bot di Pterodactyl Panel dengan Node.js 24
 
 - ✅ Akses ke Pterodactyl Panel
 - ✅ Server dengan minimal 1GB RAM
-- ✅ Node.js 24+ support
+- ✅ Node.js 20+ support (16+ minimum)
 - ✅ Port yang tersedia untuk aplikasi
 
 ## 🚀 Langkah-langkah Deployment
@@ -17,7 +17,7 @@ Panduan lengkap untuk deploy WhatsApp Bot di Pterodactyl Panel dengan Node.js 24
 ```
 Name: WhatsApp Me Bot
 Description: WhatsApp Bot dengan fitur lengkap
-Docker Image: node:24-alpine
+Docker Image: node:20-alpine
 Startup Command: npm start
 ```
 
@@ -213,7 +213,7 @@ npm audit fix
 
 **Cek Node.js Version:**
 ```bash
-node --version  # Harus 24+
+node --version  # Harus 20+
 npm --version
 ```
 

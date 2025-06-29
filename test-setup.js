@@ -38,12 +38,12 @@ class SetupValidator {
     const nodeVersion = process.version;
     const majorVersion = parseInt(nodeVersion.slice(1).split('.')[0]);
 
-    if (majorVersion >= 24) {
+    if (majorVersion >= 20) {
       this.success.push(`✅ Node.js version: ${nodeVersion} (Compatible)`);
     } else if (majorVersion >= 16) {
-      this.warnings.push(`⚠️ Node.js version: ${nodeVersion} (Minimum supported, recommend 24+)`);
+      this.warnings.push(`⚠️ Node.js version: ${nodeVersion} (Minimum supported, recommend 20+)`);
     } else {
-      this.errors.push(`❌ Node.js version: ${nodeVersion} (Too old, requires 16+)`);
+      this.errors.push(`❌ Node.js version: ${nodeVersion} (Too old, requires 20+)`);
     }
   }
 

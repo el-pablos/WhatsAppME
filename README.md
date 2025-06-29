@@ -4,7 +4,7 @@
 
 ### *Advanced WhatsApp Business Automation Solution*
 
-[![Node.js](https://img.shields.io/badge/Node.js-24+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Web.js-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://github.com/pedroslopez/whatsapp-web.js)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![Pterodactyl](https://img.shields.io/badge/Deploy-Pterodactyl-0066CC?style=for-the-badge)](https://pterodactyl.io/)
@@ -56,7 +56,7 @@ WhatsApp Me Bot adalah solusi otomasi WhatsApp yang dirancang khusus untuk menin
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| ![Node.js](https://img.shields.io/badge/Node.js-24+-339933?style=flat-square&logo=node.js) | 24+ | Runtime Environment |
+| ![Node.js](https://img.shields.io/badge/Node.js-20+-339933?style=flat-square&logo=node.js) | 20+ | Runtime Environment |
 | ![WhatsApp](https://img.shields.io/badge/WhatsApp--Web.js-1.23+-25D366?style=flat-square&logo=whatsapp) | 1.23+ | WhatsApp API Integration |
 | ![JavaScript](https://img.shields.io/badge/JavaScript-ES2024-F7DF1E?style=flat-square&logo=javascript) | ES2024 | Programming Language |
 | ![JSON](https://img.shields.io/badge/JSON-Database-000000?style=flat-square&logo=json) | - | Data Storage |
@@ -96,7 +96,7 @@ WhatsApp Me Bot adalah solusi otomasi WhatsApp yang dirancang khusus untuk menin
 ## 🚀 **Quick Start**
 
 ### **Prerequisites**
-- Node.js 24+ installed
+- Node.js 20+ installed (16+ minimum)
 - WhatsApp account
 - Terminal/Command Prompt access
 

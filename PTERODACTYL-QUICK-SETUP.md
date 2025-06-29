@@ -12,7 +12,7 @@
 ### **1. Server Settings di Pterodactyl Panel**
 
 ```yaml
-Docker Image: ghcr.io/parkervcp/yolks:nodejs_24
+Docker Image: ghcr.io/parkervcp/yolks:nodejs_20
 Startup Command: npm run start:pterodactyl
 Working Directory: /home/container
 ```
@@ -97,7 +97,7 @@ npm run start:pterodactyl
 
 ## ✅ Success Checklist
 
-- [ ] ✅ Server created dengan Docker image `nodejs_24`
+- [ ] ✅ Server created dengan Docker image `nodejs_20` (atau 20+)
 - [ ] ✅ Startup command: `npm run start:pterodactyl`
 - [ ] ✅ Memory minimal 1GB allocated
 - [ ] ✅ Semua file uploaded ke server
@@ -161,5 +161,11 @@ npm run start:pterodactyl
 
 **🐳 Docker Image untuk Copy-Paste:**
 ```
-ghcr.io/parkervcp/yolks:nodejs_24
+ghcr.io/parkervcp/yolks:nodejs_20
+```
+
+**🔄 Alternative Docker Images:**
+```
+ghcr.io/parkervcp/yolks:nodejs_21
+ghcr.io/parkervcp/yolks:nodejs_22
 ```

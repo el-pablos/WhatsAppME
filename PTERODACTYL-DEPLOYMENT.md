@@ -19,7 +19,7 @@ Error: Cannot find module 'moment-timezone'
 
 ### 1. **Server Configuration**
 
-**Docker Image:** `ghcr.io/parkervcp/yolks:nodejs_24`
+**Docker Image:** `ghcr.io/parkervcp/yolks:nodejs_20` (atau `nodejs_21`, `nodejs_22`)
 
 **Startup Command:**
 ```bash
@@ -70,7 +70,7 @@ CPU: 100%
 ## 🛡️ Robust Features
 
 ### **Environment Check**
-- ✅ Node.js version validation (24+)
+- ✅ Node.js version validation (20+, 16+ minimum)
 - ✅ Required files verification
 - ✅ Dependencies check
 - ✅ Automatic error reporting
@@ -143,7 +143,7 @@ node env-check.js
 - [ ] ✅ Config files are properly configured
 
 ### **After Upload:**
-- [ ] ✅ Set Docker image to `nodejs_24`
+- [ ] ✅ Set Docker image to `nodejs_20` (atau versi 20+)
 - [ ] ✅ Set startup command to `npm run start:pterodactyl`
 - [ ] ✅ Configure environment variables
 - [ ] ✅ Allocate sufficient resources (1GB+ RAM)

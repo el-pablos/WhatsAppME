@@ -10,10 +10,12 @@ const majorVersion = parseInt(nodeVersion.slice(1).split('.')[0]);
 
 console.log('📋 Node.js version:', nodeVersion);
 
-if (majorVersion >= 24) {
+if (majorVersion >= 20) {
   console.log('✅ Node.js version is compatible');
+} else if (majorVersion >= 16) {
+  console.log('⚠️ Node.js version is minimum supported. Recommend 20+');
 } else {
-  console.error('❌ Node.js version too old. Requires 24+');
+  console.error('❌ Node.js version too old. Requires 20+');
   process.exit(1);
 }
 

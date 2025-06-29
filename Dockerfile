@@ -2,7 +2,7 @@
 # Multi-stage build for optimized production image
 
 # Build stage
-FROM node:24-alpine AS builder
+FROM node:20-alpine AS builder
 
 # Set working directory
 WORKDIR /app
@@ -20,7 +20,7 @@ COPY . .
 RUN npm test
 
 # Production stage
-FROM node:24-alpine AS production
+FROM node:20-alpine AS production
 
 # Install system dependencies for Puppeteer
 RUN apk add --no-cache \
