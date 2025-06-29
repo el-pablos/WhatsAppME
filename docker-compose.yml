@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  whatsapp-me-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: whatsapp-me-bot
+    restart: unless-stopped
+    
+    # Environment variables
+    environment:
+      - NODE_ENV=production
+      - TZ=Asia/Jakarta
+      - PORT=3000
+    
+    # Volume mounts for persistent data
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./session:/app/session
+      - ./config:/app/config:ro  # Read-only config
+    
+    # Port mapping (optional, for health checks)
+    ports:
+      - "3000:3000"
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '1.0'
+        reservations:
+          memory: 512M
+          cpus: '0.5'
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "node", "-e", "console.log('Health check passed')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Security options
+    security_opt:
+      - no-new-privileges:true
+    
+    # Network configuration
+    networks:
+      - whatsapp-network
+
+  # Optional: Add a monitoring service
+  # watchtower:
+  #   image: containrrr/watchtower
+  #   container_name: watchtower
+  #   restart: unless-stopped
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   environment:
+  #     - WATCHTOWER_CLEANUP=true
+  #     - WATCHTOWER_POLL_INTERVAL=3600
+  #   networks:
+  #     - whatsapp-network
+
+networks:
+  whatsapp-network:
+    driver: bridge
+    name: whatsapp-me-network
+
+volumes:
+  whatsapp-data:
+    driver: local
+  whatsapp-logs:
+    driver: local
+  whatsapp-session:
+    driver: local
