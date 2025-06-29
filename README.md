@@ -44,9 +44,11 @@ WhatsApp Me Bot adalah solusi otomasi WhatsApp yang dirancang khusus untuk menin
 
 ### 💳 **Payment Integration**
 - 🔍 **Smart Detection** - Auto-detect keyword pembayaran
+- 🎨 **Telegraph UI** - Beautiful payment page dengan custom design
 - 🏦 **Multi-Method Support** - Bank Transfer, E-Wallet, QRIS
 - 📋 **Payment Templates** - Template konfirmasi otomatis
 - 🛡️ **Security Guidelines** - Tips keamanan transaksi
+- 📱 **Mobile Optimized** - Responsive design untuk semua device
 
 ## 🏗️ **Tech Stack**
 
@@ -251,7 +253,7 @@ docker run -d --name whatsapp-bot whatsapp-me-bot
 | `1-6` | Select menu option | `1`, `produk`, `kontak` |
 | `kuis` | Start quiz | `kuis`, `kuis 1`, `quiz` |
 | `poll` | Join polling | `poll`, `poll 1`, `polling` |
-| `payment` | Payment info | `payment`, `bayar`, `pembayaran` |
+| `payment` | Beautiful payment page | `payment`, `bayar`, `pembayaran` |
 
 ### **Admin Features**
 

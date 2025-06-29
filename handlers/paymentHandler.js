@@ -15,13 +15,14 @@ class PaymentHandler {
    */
   async handlePaymentRequest(message) {
     try {
-      const paymentInfo = this.formatPaymentInfo();
-      await message.reply(paymentInfo);
-      
-      // Send additional payment tips after delay
+      // Send Telegraph link with preview
+      const telegraphMessage = this.formatTelegraphMessage();
+      await message.reply(telegraphMessage);
+
+      // Send quick payment summary after delay
       setTimeout(async () => {
-        const paymentTips = this.formatPaymentTips();
-        await message.reply(paymentTips);
+        const quickSummary = this.formatQuickPaymentSummary();
+        await message.reply(quickSummary);
       }, 2000);
 
     } catch (error) {
@@ -31,31 +32,57 @@ class PaymentHandler {
   }
 
   /**
-   * Format informasi pembayaran
+   * Format Telegraph message dengan link
    */
-  formatPaymentInfo() {
-    let paymentText = `💳 *INFORMASI PEMBAYARAN*\n\n`;
-    paymentText += `┌─────────────────────────┐\n`;
-    paymentText += `│    💰 *METODE BAYAR*     │\n`;
-    paymentText += `└─────────────────────────┘\n\n`;
+  formatTelegraphMessage() {
+    let telegraphText = `💳 *${config.paymentInfo.storeName} - PAYMENT INFO*\n\n`;
+    telegraphText += `┌─────────────────────────┐\n`;
+    telegraphText += `│   🎨 *PAYMENT METHODS*   │\n`;
+    telegraphText += `└─────────────────────────┘\n\n`;
 
-    this.paymentMethods.forEach((method, index) => {
-      const icon = this.getPaymentIcon(method.type);
-      
-      paymentText += `${icon} *${method.name}*\n`;
-      paymentText += `   📋 ${method.type}\n`;
-      paymentText += `   🔢 ${method.account}\n`;
-      paymentText += `   👤 a.n. ${method.accountName}\n\n`;
+    telegraphText += `🌟 *Lihat semua metode pembayaran dengan UI yang keren:*\n\n`;
+    telegraphText += `🔗 *Link Payment:*\n`;
+    telegraphText += `${config.paymentTelegraphUrl}\n\n`;
+
+    telegraphText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    telegraphText += `⚡ *Metode Tersedia:*\n`;
+
+    config.paymentInfo.methods.forEach((method, index) => {
+      telegraphText += `${method.icon} *${method.name}*\n`;
+      telegraphText += `   📱 ${method.account}\n`;
+      if (index < config.paymentInfo.methods.length - 1) {
+        telegraphText += `\n`;
+      }
     });
 
-    paymentText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
-    paymentText += `📝 *CATATAN PENTING:*\n\n`;
+    telegraphText += `\n👤 *Semua a.n:* ${config.paymentInfo.ownerName}\n\n`;
+    telegraphText += `💡 *Klik link di atas untuk tampilan lengkap!*`;
 
-    this.paymentNotes.forEach((note, index) => {
-      paymentText += `${index + 1}. ${note}\n`;
+    return telegraphText;
+  }
+
+  /**
+   * Format quick payment summary
+   */
+  formatQuickPaymentSummary() {
+    let summaryText = `⚡ *QUICK PAYMENT SUMMARY*\n\n`;
+    summaryText += `🏪 *${config.paymentInfo.storeName}*\n\n`;
+
+    config.paymentInfo.methods.forEach((method, index) => {
+      summaryText += `${method.icon} *${method.name}:* ${method.account}\n`;
     });
 
-    return paymentText;
+    summaryText += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    summaryText += `📋 *Cara Bayar:*\n`;
+    summaryText += `1️⃣ Transfer sesuai nominal\n`;
+    summaryText += `2️⃣ Screenshot bukti\n`;
+    summaryText += `3️⃣ Kirim ke admin\n`;
+    summaryText += `4️⃣ Tunggu konfirmasi\n\n`;
+
+    summaryText += `⚠️ *Penting:* Semua rekening a.n. ${config.paymentInfo.ownerName}\n\n`;
+    summaryText += `🔗 *Detail lengkap:* ${config.paymentTelegraphUrl}`;
+
+    return summaryText;
   }
 
   /**

@@ -66,32 +66,44 @@ Senin - Jumat: 08:00 - 17:00 WIB
 Terima kasih sudah memilih layanan kami! 🌟`
   ],
 
-  // Informasi Pembayaran
+  // Telegraph Payment Page (Custom UI/UX)
+  paymentTelegraphUrl: "https://telegra.ph/TAM-STORE-Payment-Methods-06-29",
+
+  // Payment Info untuk TAM Store
   paymentInfo: {
+    storeName: "TAM STORE",
+    ownerName: "Muhammad Akbar",
     methods: [
-      {
-        name: "BCA",
-        type: "Bank Transfer",
-        account: "1234567890",
-        accountName: "PT. CONTOH BISNIS"
-      },
       {
         name: "DANA",
         type: "E-Wallet",
-        account: "081234567890",
-        accountName: "NAMA PENERIMA"
+        account: "082210819939",
+        accountName: "Muhammad Akbar",
+        icon: "💰",
+        description: "Transfer langsung tanpa biaya admin"
+      },
+      {
+        name: "Bank Jago",
+        type: "Bank Transfer",
+        account: "102685155355",
+        accountName: "Muhammad Akbar",
+        icon: "🏛️",
+        description: "Tersedia 24/7 dengan biaya transfer sesuai bank"
       },
       {
         name: "QRIS",
         type: "QR Code",
-        account: "qris-static-code-here",
-        accountName: "MERCHANT NAME"
+        account: "https://files.catbox.moe/ge72fc.jpg",
+        accountName: "Muhammad Akbar",
+        icon: "📱",
+        description: "BEBAS BIAYA ADMIN - Support semua e-wallet"
       }
     ],
     notes: [
+      "Semua rekening atas nama Muhammad Akbar",
       "Konfirmasi pembayaran dengan mengirim bukti transfer",
       "Pembayaran akan diverifikasi dalam 1x24 jam",
-      "Untuk pembayaran di atas Rp 1.000.000 harap konfirmasi terlebih dahulu"
+      "Simpan bukti transfer sampai pesanan selesai"
     ]
   },
 
