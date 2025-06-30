@@ -1,0 +1,229 @@
+{
+  "categories": [
+    {
+      "id": "electronics",
+      "name": "🔌 Elektronik",
+      "description": "Gadget dan perangkat elektronik terbaru",
+      "icon": "🔌",
+      "active": true
+    },
+    {
+      "id": "fashion",
+      "name": "👕 Fashion",
+      "description": "Pakaian dan aksesoris trendy",
+      "icon": "👕",
+      "active": true
+    },
+    {
+      "id": "home",
+      "name": "🏠 Home & Living",
+      "description": "Peralatan rumah tangga dan dekorasi",
+      "icon": "🏠",
+      "active": true
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_001",
+      "name": "iPhone 15 Pro Max",
+      "category": "electronics",
+      "price": 18999000,
+      "originalPrice": 19999000,
+      "currency": "IDR",
+      "description": "iPhone terbaru dengan teknologi A17 Pro chip, kamera 48MP, dan layar Super Retina XDR 6.7 inch. Tersedia dalam berbagai warna menarik.",
+      "images": [
+        "https://example.com/iphone15-1.jpg",
+        "https://example.com/iphone15-2.jpg"
+      ],
+      "specifications": {
+        "Storage": "256GB",
+        "RAM": "8GB",
+        "Camera": "48MP Triple Camera",
+        "Display": "6.7 inch Super Retina XDR",
+        "Battery": "4441 mAh",
+        "OS": "iOS 17"
+      },
+      "variants": [
+        {
+          "name": "Natural Titanium",
+          "price": 18999000,
+          "stock": 5
+        },
+        {
+          "name": "Blue Titanium",
+          "price": 18999000,
+          "stock": 3
+        },
+        {
+          "name": "White Titanium",
+          "price": 18999000,
+          "stock": 7
+        }
+      ],
+      "tags": [
+        "smartphone",
+        "apple",
+        "premium",
+        "flagship"
+      ],
+      "weight": "221g",
+      "dimensions": "159.9 x 76.7 x 8.25 mm",
+      "warranty": "1 tahun resmi Apple",
+      "condition": "new",
+      "featured": true,
+      "active": true,
+      "createdAt": "2024-12-29T10:00:00Z",
+      "updatedAt": "2024-12-29T10:00:00Z"
+    },
+    {
+      "id": "prod_002",
+      "name": "Samsung Galaxy S24 Ultra",
+      "category": "electronics",
+      "price": 16999000,
+      "originalPrice": 17999000,
+      "currency": "IDR",
+      "description": "Flagship Samsung dengan S Pen, kamera 200MP, dan layar Dynamic AMOLED 2X. Perfect untuk produktivitas dan fotografi professional.",
+      "images": [
+        "https://example.com/galaxy-s24-1.jpg"
+      ],
+      "specifications": {
+        "Storage": "256GB",
+        "RAM": "12GB",
+        "Camera": "200MP Quad Camera",
+        "Display": "6.8 inch Dynamic AMOLED 2X",
+        "Battery": "5000 mAh",
+        "OS": "Android 14"
+      },
+      "variants": [
+        {
+          "name": "Titanium Black",
+          "price": 16999000,
+          "stock": 4
+        },
+        {
+          "name": "Titanium Gray",
+          "price": 16999000,
+          "stock": 2
+        }
+      ],
+      "tags": [
+        "smartphone",
+        "samsung",
+        "s-pen",
+        "camera"
+      ],
+      "weight": "232g",
+      "dimensions": "162.3 x 79.0 x 8.6 mm",
+      "warranty": "1 tahun resmi Samsung",
+      "condition": "new",
+      "featured": true,
+      "active": true,
+      "createdAt": "2024-12-29T10:00:00Z",
+      "updatedAt": "2024-12-29T10:00:00Z"
+    },
+    {
+      "id": "prod_003",
+      "name": "Kemeja Batik Premium",
+      "category": "fashion",
+      "price": 299000,
+      "originalPrice": 399000,
+      "currency": "IDR",
+      "description": "Kemeja batik premium dengan motif tradisional modern. Bahan katun berkualitas tinggi, nyaman dipakai untuk acara formal maupun casual.",
+      "images": [
+        "https://example.com/batik-1.jpg"
+      ],
+      "specifications": {
+        "Material": "100% Katun Premium",
+        "Pattern": "Batik Tradisional Modern",
+        "Fit": "Regular Fit",
+        "Care": "Machine Washable"
+      },
+      "variants": [
+        {
+          "name": "Size M",
+          "price": 299000,
+          "stock": 10
+        },
+        {
+          "name": "Size L",
+          "price": 299000,
+          "stock": 8
+        },
+        {
+          "name": "Size XL",
+          "price": 299000,
+          "stock": 5
+        }
+      ],
+      "tags": [
+        "batik",
+        "kemeja",
+        "formal",
+        "traditional"
+      ],
+      "weight": "200g",
+      "dimensions": "Chest: 52cm (Size L)",
+      "warranty": "30 hari garansi kualitas",
+      "condition": "new",
+      "featured": false,
+      "active": true,
+      "createdAt": "2024-12-29T10:00:00Z",
+      "updatedAt": "2024-12-29T10:00:00Z"
+    },
+    {
+      "id": "prod_004",
+      "name": "MacBook Pro M3",
+      "category": "electronics",
+      "price": 25999000,
+      "originalPrice": 27999000,
+      "currency": "IDR",
+      "description": "MacBook Pro terbaru dengan chip M3, layar Liquid Retina XDR 14 inch, dan performa luar biasa untuk professional.",
+      "images": [],
+      "specifications": {
+        "Processor": "Apple M3 8-core CPU",
+        "Memory": "16GB Unified Memory",
+        "Storage": "512GB SSD",
+        "Display": "14-inch Liquid Retina XDR",
+        "Graphics": "10-core GPU"
+      },
+      "variants": [
+        {
+          "name": "Space Gray",
+          "price": 25999000,
+          "stock": 3
+        },
+        {
+          "name": "Silver",
+          "price": 25999000,
+          "stock": 2
+        }
+      ],
+      "tags": [
+        "laptop",
+        "apple",
+        "professional",
+        "macbook"
+      ],
+      "weight": "1.6kg",
+      "dimensions": "",
+      "warranty": "1 tahun resmi Apple",
+      "condition": "new",
+      "featured": true,
+      "active": true,
+      "createdAt": "2025-06-30T04:53:08.106Z",
+      "updatedAt": "2025-06-30T04:53:08.109Z"
+    }
+  ],
+  "settings": {
+    "currency": "IDR",
+    "currencySymbol": "Rp",
+    "showPrices": true,
+    "showStock": true,
+    "showVariants": true,
+    "maxProductsPerPage": 5,
+    "enableWishlist": true,
+    "enableCompare": true,
+    "autoGenerateId": true,
+    "lastProductId": 4
+  }
+}

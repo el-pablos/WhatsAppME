@@ -14,6 +14,8 @@ const config = require('./config/config');
 const MenuHandler = require('./handlers/menuHandler');
 const QuizHandler = require('./handlers/quizHandler');
 const PaymentHandler = require('./handlers/paymentHandler');
+const ProductHandler = require('./handlers/productHandler');
+const OrderHandler = require('./handlers/orderHandler');
 const UserManager = require('./utils/userManager');
 const MessageFormatter = require('./utils/messageFormatter');
 
@@ -43,6 +45,8 @@ class WhatsAppBot {
     this.menuHandler = new MenuHandler();
     this.quizHandler = new QuizHandler();
     this.paymentHandler = new PaymentHandler();
+    this.productHandler = new ProductHandler();
+    this.orderHandler = new OrderHandler();
     this.messageFormatter = new MessageFormatter();
 
     this.initializeBot();
@@ -126,6 +130,28 @@ class WhatsAppBot {
       return;
     }
 
+    // Handle product commands
+    if (this.isProductCommand(messageBody)) {
+      await this.productHandler.handleProductCommand(message, messageBody);
+      return;
+    }
+
+    // Handle order commands
+    if (this.isOrderCommand(messageBody)) {
+      await this.orderHandler.handleOrderCommand(message, messageBody);
+      return;
+    }
+
+    // Handle active order sessions
+    if (this.orderHandler.hasActiveSession(userId)) {
+      if (messageBody === 'batal') {
+        await this.orderHandler.cancelOrder(message);
+      } else {
+        await this.orderHandler.processOrderStep(message, message.body);
+      }
+      return;
+    }
+
     // Handle quiz answers
     if (await this.quizHandler.isUserInQuiz(userId)) {
       await this.quizHandler.handleQuizAnswer(message, messageBody);
@@ -166,6 +192,27 @@ class WhatsAppBot {
   isPaymentKeyword(messageBody) {
     const paymentKeywords = ['payment', 'bayar', 'pembayaran', 'transfer', 'rekening', 'qris'];
     return paymentKeywords.some(keyword => messageBody.includes(keyword));
+  }
+
+  /**
+   * Cek apakah pesan adalah command produk
+   */
+  isProductCommand(messageBody) {
+    const productKeywords = [
+      'produk', 'katalog', 'barang', 'jual', 'beli',
+      'add produk', 'tambah produk', 'kategori'
+    ];
+    return productKeywords.some(keyword => messageBody.includes(keyword));
+  }
+
+  /**
+   * Cek apakah pesan adalah command order
+   */
+  isOrderCommand(messageBody) {
+    const orderKeywords = [
+      'order', 'pesan', 'beli', 'cara order'
+    ];
+    return orderKeywords.some(keyword => messageBody.includes(keyword));
   }
 
   /**

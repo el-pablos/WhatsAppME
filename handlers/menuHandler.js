@@ -60,7 +60,10 @@ class MenuHandler {
       case '1':
       case 'produk':
       case 'info produk':
-        await this.sendProductInfo(message);
+        // Redirect to product handler for better catalog experience
+        const ProductHandler = require('./productHandler');
+        const productHandler = new ProductHandler();
+        await productHandler.showProductCatalog(message);
         break;
       
       case '2':

@@ -47,8 +47,8 @@ class MessageFormatter {
   formatMenuOptions() {
     let optionsText = `🎯 *PILIH MENU YANG DIINGINKAN:*\n\n`;
     
-    optionsText += `1️⃣ *Info Produk*\n`;
-    optionsText += `   📦 Katalog & spesifikasi lengkap\n\n`;
+    optionsText += `1️⃣ *Katalog Produk*\n`;
+    optionsText += `   🛍️ Jelajahi produk terbaru dengan harga terbaik\n\n`;
     
     optionsText += `2️⃣ *Kontak Admin*\n`;
     optionsText += `   📞 Hubungi customer service\n\n`;
@@ -73,6 +73,7 @@ class MessageFormatter {
     optionsText += `• Untuk kembali ke menu: ketik *menu*\n\n`;
     
     optionsText += `🔍 *Pencarian cepat:*\n`;
+    optionsText += `• Ketik *produk* untuk lihat katalog\n`;
     optionsText += `• Ketik *payment* untuk info pembayaran\n`;
     optionsText += `• Ketik *kuis* untuk mulai kuis\n`;
     optionsText += `• Ketik *poll* untuk ikut polling\n\n`;
